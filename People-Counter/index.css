@@ -34,7 +34,7 @@ p{
     padding-right: 5px;
 }
 button {
-    display: flexbox;
+    display: -ms-flexbox;
     padding-top: 10px;
     padding-bottom: 10px;
     color: white;
