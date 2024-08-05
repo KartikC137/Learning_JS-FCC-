@@ -2,7 +2,6 @@
     <head>
         <title>Password Generator</title>
         <link rel="stylesheet" href="./index.css">
-        <script src="./index.js"></script>
     </head>
     <body>
         <div style="
@@ -13,14 +12,15 @@
         left: 0;
         right: 0;
         "></div>
-        <div class="container">
-            <div class="overlay-box">
-                <div class="title">Password Generator!</div>
-                <div class="content">1234567812345678</div>
-                <div class="button-div">
-                    <button class="button" onclick="generatePassword()">Generate</button>
+        <div id="container">
+            <div id="overlay-box">
+                <div id="title">Password Generator!</div>
+                <div id="content">1234567812345678</div>
+                <div id="button-div">
+                    <button id="button" onclick="generatePassword()">Generate</button>
                 </div>
             </div>
         </div>
+        <script src="index.js"></script>
     </body>
 </html>

@@ -1,4 +1,4 @@
-.overlay-box{
+#overlay-box{
     color: lightcoral;
     background-color: rgba(0,0,0,0);
     display: flex;
@@ -8,7 +8,7 @@
     border: 1px solid rgba(255,255,255,0.1);
     box-shadow: 0 0 500px rgba(240,128,128,0.7);
 }
-.container{
+#container{
     justify-content: center;
     align-items: center;
     display: flex;
@@ -19,12 +19,12 @@
     left: 0;
     right: 0;
 }
-.title{
+#title{
     font-weight: bold;
     font-size: 20px;
     margin-bottom: 20px;
 }
-.content{
+#content{
     display: flex;
     justify-content: center;
     border: 1px solid rgba(240,128,128,0.6);
@@ -33,11 +33,11 @@
     font-size: 20px;
     margin-bottom: 20px;
 }
-.button-div{
+#button-div{
     display: flex;
     justify-content: center;
 }
-.button{
+#button{
     font-size: 15px;
     color: rgb(81, 4, 115);
     width: 180px;
