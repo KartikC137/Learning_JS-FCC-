@@ -1,9 +1,25 @@
-<html>
+<html xmlns="http://www.w3.org/1999/html">
     <head>
-        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="./index.css">
+        <script src="./index.js"></script>
     </head>
     <body>
-        <h1>Generate a Random Password to keep your accounts safe</h1>
-        <script src="index.js"></script>
+        <div style="
+        position:fixed;
+        background-color: black;
+        top:0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        "></div>
+        <div class="container">
+            <div class="overlay-box">
+                <div class="title">Password Generator!</div>
+                <div class="content">1234567812345678</div>
+                <div class="button-div">
+                    <button class="button" onclick="generatePassword()">Generate</button>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
