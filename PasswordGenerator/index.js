@@ -2,10 +2,8 @@ const characters =["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","
 "/"];
 
 let contentEl = document.getElementById("content-el");
+let generateEL= document.getElementById("generate-el");
 
-function generateRandomPassword() {
-
-}
 function logOutPassword() {
     let storeRandomNumber="";
     for(let i = 0; i < 16; i++) {
@@ -14,4 +12,6 @@ function logOutPassword() {
     }
     contentEl.textContent = storeRandomNumber;
 }
+
+
 
