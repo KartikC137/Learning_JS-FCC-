@@ -5,6 +5,7 @@ const ulEl = document.getElementById("ul-el")
 const deleteBtn = document.getElementById("delete-btn")
 const leadsFromLocalStorage = JSON.parse( localStorage.getItem("myLeads") )
 const tabBtn = document.getElementById("tab-btn")
+const bodyEl = document.body
 
 if (leadsFromLocalStorage) {
     myLeads = leadsFromLocalStorage
@@ -31,12 +32,14 @@ function render(leads) {
         `
     }
     ulEl.innerHTML = listItems
+    ulEl.style.cssText = "border: 1px solid lightcoral; box-shadow: 2px 6px 6px rgba(240, 128, 128, 0.3),2px 6px 30px rgba(240, 128, 128, 0.3) inset;"
 }
 
 deleteBtn.addEventListener("dblclick", function() {
     localStorage.clear()
     myLeads = []
     render(myLeads)
+    ulEl.style.cssText = ""
 })
 
 inputBtn.addEventListener("click", function() {
