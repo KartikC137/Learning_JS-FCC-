@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    min-width: 400px;
+    border: 1px solid lightcoral;
+    background-image: url('darkSpace.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid lightcoral;
+    margin-bottom: 10px;
+    background-color: rgba(240,128,128,0.1);
+    backdrop-filter: blur(1px);
+    color: lightcoral;
+    box-shadow: 2px 6px 6px rgba(240, 128, 128, 0.3),2px 6px 15px rgba(240, 128, 128, 0.3) inset;
+}
+
+button {
+    background: rgba(240, 128, 128, 0.1);
+    backdrop-filter: blur(1px);
+    color: lightcoral;
+    padding: 10px 20px;
+    border: 1px solid lightcoral;
+    font-weight: bold;
+    box-shadow: 2px 6px 6px rgba(240, 128, 128, 0.3),2px 6px 20px rgba(240, 128, 128, 0.3) inset;
+}
+
+#delete-btn {
+    background: rgba(220,20,60,0.2);
+    backdrop-filter: blur(1px);
+    border: 1px solid crimson;
+    color: lightcoral;
+    box-shadow: 2px 6px 6px rgba(220, 20, 60, 0.3),2px 6px 20px rgba(220, 20, 60, 0.3) inset;
+}
+
+ul {
+    margin-top: 10px;
+    list-style: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+li {
+    margin-top: 5px;
+
+}
+
+a {
+    color: lightcoral;
+    font-size: 15px;
+}
+
+
