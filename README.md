@@ -1,1 +1,2 @@
-An Mobile App variant of SaveUrls Chrome extension.
+Under development:
+Trying out firebase.
