@@ -8,6 +8,9 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 }
+label{
+    color: lightcoral;
+}
 
 input {
     width: 100%;
@@ -21,21 +24,27 @@ input {
     box-shadow: 2px 6px 6px rgba(240, 128, 128, 0.3),2px 6px 15px rgba(240, 128, 128, 0.3) inset;
 }
 
+input::placeholder {
+    color: rgba(240, 128, 128, 0.49);
+}
+
 button {
-    background: rgba(240, 128, 128, 0.1);
+    width: 49.65%;
     backdrop-filter: blur(1px);
     color: lightcoral;
     padding: 10px 20px;
-    border: 1px solid lightcoral;
     font-weight: bold;
+}
+
+#input-btn{
+    background: rgba(240, 128, 128, 0.1);
+    border: 1px solid lightcoral;
     box-shadow: 2px 6px 6px rgba(240, 128, 128, 0.3),2px 6px 20px rgba(240, 128, 128, 0.3) inset;
 }
 
 #delete-btn {
     background: rgba(220,20,60,0.2);
-    backdrop-filter: blur(1px);
     border: 1px solid crimson;
-    color: lightcoral;
     box-shadow: 2px 6px 6px rgba(220, 20, 60, 0.3),2px 6px 20px rgba(220, 20, 60, 0.3) inset;
 }
 

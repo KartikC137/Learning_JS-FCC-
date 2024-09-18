@@ -1,34 +1,38 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js"
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js"
+import { getDatabase,ref,push,onValue,remove } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js"
 
-let myLeads = []
+const firebaseConfig = {
+    databaseURL: "https://saveurls-8caba-default-rtdb.asia-southeast1.firebasedatabase.app/"
+}
+
+const app = initializeApp(firebaseConfig)
+const database = getDatabase(app)
+const referenceInDb = ref(database,"SavedUrls")
+
+// console.log(app)
+// console.log(database)
+
+let savedUrls = []
 const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
 const deleteBtn = document.getElementById("delete-btn")
-const leadsFromLocalStorage = JSON.parse( localStorage.getItem("myLeads") )
-const tabBtn = document.getElementById("tab-btn")
-const bodyEl = document.body
 
-if (leadsFromLocalStorage) {
-    myLeads = leadsFromLocalStorage
-    render(myLeads)
-}
-
-tabBtn.addEventListener("click", function(){    
-    chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
-        myLeads.push(tabs[0].url)
-        localStorage.setItem("myLeads", JSON.stringify(myLeads) )
-        render(myLeads)
-    })
+onValue(referenceInDb,function (snapshot){
+    if(snapshot.exists()){
+        savedUrls = Object.values(snapshot.val())
+        render(savedUrls)
+    }
 })
 
-function render(leads) {
+
+function render(urls) {
     let listItems = ""
-    for (let i = 0; i < leads.length; i++) {
+    for (let i = 0; i < urls.length; i++) {
         listItems += `
             <li>
-                <a target='_blank' href='${leads[i]}'>
-                    ${leads[i]}
+                <a target='_blank' href='https://${urls[i]}'>
+                    ${urls[i]}
                 </a>
             </li>
         `
@@ -37,16 +41,16 @@ function render(leads) {
     ulEl.style.cssText = "border: 1px solid lightcoral; box-shadow: 2px 6px 6px rgba(240, 128, 128, 0.3),2px 6px 30px rgba(240, 128, 128, 0.3) inset;"
 }
 
-deleteBtn.addEventListener("dblclick", function() {
-    localStorage.clear()
-    myLeads = []
-    render(myLeads)
+deleteBtn.addEventListener("dblclick", function(){
+    remove(referenceInDb)
+    ulEl.innerHTML= ""
     ulEl.style.cssText = ""
 })
 
 inputBtn.addEventListener("click", function() {
-    myLeads.push(inputEl.value)
-    inputEl.value = ""
-    localStorage.setItem("myLeads", JSON.stringify(myLeads) )
-    render(myLeads)
+    if(inputEl.value==""){
+        inputEl.value = ""
+    }else{
+    push(referenceInDb,inputEl.value)
+    inputEl.value = ""}
 })
