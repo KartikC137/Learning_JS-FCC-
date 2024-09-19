@@ -29,7 +29,7 @@ input::placeholder {
 }
 
 button {
-    width: 49.65%;
+    width: 200px;
     backdrop-filter: blur(1px);
     color: lightcoral;
     padding: 10px 20px;
@@ -49,16 +49,14 @@ button {
 }
 
 ul {
-    margin-top: 10px;
-    list-style: none;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
+    margin-top: 12px;
+    padding: 10px 20px 20px;
+    list-style: circle inside ;
+    color: lightcoral;
 }
 
 li {
     margin-top: 5px;
-
 }
 
 a {

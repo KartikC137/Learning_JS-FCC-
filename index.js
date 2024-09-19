@@ -1,6 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js"
 import { getDatabase,ref,push,onValue,remove } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js"
 
+
 const firebaseConfig = {
     databaseURL: "https://saveurls-8caba-default-rtdb.asia-southeast1.firebasedatabase.app/"
 }
@@ -38,7 +39,10 @@ function render(urls) {
         `
     }
     ulEl.innerHTML = listItems
-    ulEl.style.cssText = "border: 1px solid lightcoral; box-shadow: 2px 6px 6px rgba(240, 128, 128, 0.3),2px 6px 30px rgba(240, 128, 128, 0.3) inset;"
+    ulEl.style.cssText = "border: 1px solid lightcoral; " +
+        "box-shadow: 2px 6px 6px rgba(240, 128, 128, 0.3),2px 6px 30px rgba(240, 128, 128, 0.3) inset;" +
+        "backdrop-filter: blur(3px);"
+
 }
 
 deleteBtn.addEventListener("dblclick", function(){
