@@ -8,6 +8,11 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 }
+label{
+    font-size: 17px;
+    color: lightcoral;
+    font-weight: bold;
+}
 
 input {
     width: 100%;
@@ -19,42 +24,74 @@ input {
     backdrop-filter: blur(1px);
     color: lightcoral;
     box-shadow: 2px 6px 6px rgba(240, 128, 128, 0.3),2px 6px 15px rgba(240, 128, 128, 0.3) inset;
+    transition: all ease-out 0.5s;
+}
+
+input:hover{
+    background-color: rgba(240, 128, 128, 0.2);
+}
+
+input::placeholder {
+    color: rgba(240, 128, 128, 0.8);
 }
 
 button {
-    background: rgba(240, 128, 128, 0.1);
+    font-size: 14px;
+    width: 49.5%;
+    margin-top: 5px;
     backdrop-filter: blur(1px);
     color: lightcoral;
     padding: 10px 20px;
-    border: 1px solid lightcoral;
     font-weight: bold;
-    box-shadow: 2px 6px 6px rgba(240, 128, 128, 0.3),2px 6px 20px rgba(240, 128, 128, 0.3) inset;
+    transition: background-color ease-out 0.5s;
+}
+
+#input-btn,#tab-btn{
+    background: rgba(144, 238, 144, 0.1);
+    border: 1px solid lightgreen;
+    box-shadow: 2px 6px 6px rgba(144, 238, 144, 0.3),2px 6px 20px rgba(144, 238, 144, 0.3) inset;
 }
 
 #delete-btn {
+    margin-top: 7px;
     background: rgba(220,20,60,0.2);
-    backdrop-filter: blur(1px);
     border: 1px solid crimson;
-    color: lightcoral;
-    box-shadow: 2px 6px 6px rgba(220, 20, 60, 0.3),2px 6px 20px rgba(220, 20, 60, 0.3) inset;
+    box-shadow: 2px 6px 6px rgba(220, 20, 60, 0.5),2px 6px 20px rgba(220, 20, 60, 0.3) inset;
+}
+
+#input-btn:hover,#tab-btn:hover{
+    background-color: rgba(144, 238, 144, 0.2);
+}
+#delete-btn:hover{
+    background-color: rgba(220,20,60,0.3);
 }
 
 ul {
-    margin-top: 10px;
-    list-style: none;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
+    border: 1px solid lightcoral;
+    box-shadow: 2px 6px 6px rgba(240, 128, 128, 0.3),2px 6px 30px rgba(240, 128, 128, 0.3) inset;
+    backdrop-filter: blur(1px);
+    padding: 10px 0 10px 30px;
+    list-style-type: armenian;
+    color: lightcoral;
 }
 
-li {
-    margin-top: 5px;
+#li-el {
+    padding: 5px;
+    transition: color ease-out 0.3s;
+    border: 1px solid rgba(0,0,0,0);
+}
 
+#li-el:hover{
+    color: #4fc6e4;
+    border: 1px solid #4fc6e4;
+    box-shadow: 2px 6px 6px rgba(79, 198, 228,0.3),2px 6px 15px rgba(79, 198, 228,0.3) inset;
 }
 
 a {
-    color: lightcoral;
-    font-size: 15px;
+    color: #4fc6e4;
+    font-size: 18px;
+    transition: color ease-in-out 0.1s;
 }
+
 
 

@@ -5,7 +5,6 @@ const ulEl = document.getElementById("ul-el")
 const deleteBtn = document.getElementById("delete-btn")
 const leadsFromLocalStorage = JSON.parse( localStorage.getItem("myLeads") )
 const tabBtn = document.getElementById("tab-btn")
-const bodyEl = document.body
 
 if (leadsFromLocalStorage) {
     myLeads = leadsFromLocalStorage
@@ -20,31 +19,71 @@ tabBtn.addEventListener("click", function(){
     })
 })
 
-function render(leads) {
+function render(urls) {
     let listItems = ""
-    for (let i = 0; i < leads.length; i++) {
+    for (let i = 0; i < urls.length; i++) {
         listItems += `
-            <li>
-                <a target='_blank' href='${leads[i]}'>
-                    ${leads[i]}
+            <li id='li-el'>
+                <a target='_blank' href='${urls[i]}'>
+                    ${urls[i]}
                 </a>
             </li>
         `
     }
     ulEl.innerHTML = listItems
-    ulEl.style.cssText = "border: 1px solid lightcoral; box-shadow: 2px 6px 6px rgba(240, 128, 128, 0.3),2px 6px 30px rgba(240, 128, 128, 0.3) inset;"
+    let liEl = document.getElementsByTagName("li")
+    let aEl = document.getElementsByTagName("a")
+    for (let i = 0; i < liEl.length; i++) {
+        let clickCount = 0
+        liEl[i].addEventListener("dblclick", function () {
+            aEl[i].click()
+            liEl.style.cssText = "color:#4fc6e4"
+        })
+
+        liEl[i].addEventListener("mouseover", respondMouseOver)
+        liEl[i].addEventListener("mouseout", respondMouseOut)
+
+        liEl[i].addEventListener( "click", function () {
+            clickCount++;
+            liEl[i].removeEventListener("mouseover", respondMouseOver)
+            liEl[i].removeEventListener("mouseout", respondMouseOut)
+            if (clickCount === 1) {
+                aEl[i].style.cssText = "color:lightgreen;"
+            } else if(clickCount > 1) {
+                clickCount = 0;
+                liEl[i].addEventListener("mouseover", respondMouseOver)
+                liEl[i].addEventListener("mouseout", respondMouseOut)
+            }
+        })
+
+        aEl[i].addEventListener("click", function () {
+            liEl[i].style.cssText = "color:#4fc6e4;"
+        })
+        function respondMouseOver() {
+            aEl[i].style.cssText = "color:lightgreen;"
+            inputEl.placeholder = "Hint: Click to save, Double click to open site"
+        }
+        function respondMouseOut() {
+            aEl[i].style.cssText = "color:#4fc6e4;"
+            inputEl.placeholder = "https://"
+        }
+    }
 }
 
 deleteBtn.addEventListener("dblclick", function() {
     localStorage.clear()
     myLeads = []
     render(myLeads)
-    ulEl.style.cssText = ""
+    ulEl.innerHTML = ""
 })
 
 inputBtn.addEventListener("click", function() {
-    myLeads.push(inputEl.value)
-    inputEl.value = ""
-    localStorage.setItem("myLeads", JSON.stringify(myLeads) )
-    render(myLeads)
+    if(inputEl.value == ""){
+        void(0)
+    }else{
+        myLeads.push(inputEl.value)
+        localStorage.setItem("myLeads", JSON.stringify(myLeads) )
+        render(myLeads)
+        inputEl.value = "";
+    }
 })

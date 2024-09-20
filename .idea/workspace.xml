@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0707c201-93af-4485-96d6-19d32bebd223" name="Changes" comment="Created Basic structure">
+    <list default="true" id="0707c201-93af-4485-96d6-19d32bebd223" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Leads tracker browser extension/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/Leads tracker browser extension/icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Leads tracker browser extension/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/Leads tracker browser extension/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Leads tracker browser extension/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Leads tracker browser extension/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SaveSiteURLs/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/SaveSiteURLs/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SaveSiteURLs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/SaveSiteURLs/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SaveSiteURLs/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/SaveSiteURLs/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +16,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="SaveUrls_MobileApp" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -41,7 +46,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "LeadsTracker",
+    "git-widget-placeholder": "SaveUrl__Chrome-Extension",
     "last_opened_file_path": "/home/kartik/LEARNING/WebDev/HTML",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -96,6 +101,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created Basic structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created Basic structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
 </project>
