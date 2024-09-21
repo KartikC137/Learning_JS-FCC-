@@ -2,7 +2,7 @@ body {
     margin: 10px;
     padding: 20px;
     font-family: Arial, Helvetica, sans-serif;
-    height: auto;
+    min-height: 900px;
     min-width: 400px;
     border: 1px solid lightcoral;
     background-image: url('darkSpace.jpg');
@@ -64,19 +64,6 @@ button {
     background-color: rgba(220,20,60,0.3);
 }
 
-#info-el{
-    display: inline-flex;
-    opacity: 0;
-    margin: 0;
-    min-width: 400px;
-    padding: 10px 20px;
-    font-size: 15px;
-    font-weight: bold;
-    backdrop-filter: blur(1px);
-    color: lightcoral;
-    box-shadow: 2px 6px 6px rgba(79, 198, 228,0.3),2px 6px 15px rgba(79, 198, 228,0.3) inset;
-    transition: opacity ease-in-out 0.2s;
-}
 
 ul {
     margin-top: 12px;

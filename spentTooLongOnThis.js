@@ -13,7 +13,6 @@ const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
 const deleteBtn = document.getElementById("delete-btn")
-const infoEl = document.getElementById("info-el")
 let savedUrls = []
 let ulStyleContent = "border: 1px solid lightcoral; " +
     "box-shadow: 2px 6px 6px rgba(240, 128, 128, 0.3),2px 6px 30px rgba(240, 128, 128, 0.3) inset;" +
@@ -69,12 +68,11 @@ function render(urls) {
 
             function respondMouseOver() {
                 aEl[i].style.cssText = "color:lightgreen;"
-                infoEl.style.cssText = "opacity:1"
-                infoEl.innerText = "Hint: Click to save, Double click to open site"
+                inputEl.placeholder = "Hint: Click to highlight text"
             }
             function respondMouseOut() {
                 aEl[i].style.cssText = "color:#4fc6e4;"
-                infoEl.style.cssText = "opacity:0"
+                inputEl.placeholder= "https://"
             }
     }
 }
