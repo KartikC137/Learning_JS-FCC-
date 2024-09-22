@@ -1,7 +1,18 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js"
 import { getDatabase,ref,push,onValue,remove } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js"
 
+//import
+// intializeApp
+// getDatabase
+// reference
+// push
 
+// onValue
+// snapshot.exists
+// Object --> arrays
+// setting the viewport
+// favicon
+// web application manifest
 const firebaseConfig = {
     databaseURL: "https://saveurls-8caba-default-rtdb.asia-southeast1.firebasedatabase.app/"
 }
@@ -19,7 +30,7 @@ let ulStyleContent = "border: 1px solid lightcoral; " +
     "backdrop-filter: blur(1px);"
 onValue(referenceInDb,function (snapshot){
     if(snapshot.exists()){
-        savedUrls = Object.values(snapshot.val())
+        savedUrls = Object.values(snapshot.val()) //get an array of keys and values in an object
         render(savedUrls)
     }
 })

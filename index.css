@@ -1,93 +1,112 @@
 body {
-    margin: 10px;
-    padding: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    min-height: 900px;
-    min-width: 400px;
-    border: 1px solid lightcoral;
-    background-image: url('darkSpace.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
+  margin: 10px;
+  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 901px;
+  min-width: 350px;
+  border: 1px solid lightcoral;
+  background-image: url("darkSpace.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-label{
-    color: lightcoral;
-    font-weight: bold;
+label {
+  color: lightcoral;
+  font-weight: bold;
 }
 
 input {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    border: 1px solid lightcoral;
-    margin-bottom: 10px;
-    background-color: rgba(240,128,128,0.1);
-    backdrop-filter: blur(1px);
-    color: lightcoral;
-    box-shadow: 2px 6px 6px rgba(240, 128, 128, 0.3),2px 6px 15px rgba(240, 128, 128, 0.3) inset;
-    transition: all ease-out 0.5s;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid lightcoral;
+  margin-bottom: 10px;
+  background-color: rgba(240, 128, 128, 0.1);
+  backdrop-filter: blur(1px);
+  color: lightcoral;
+  box-shadow:
+    2px 6px 6px rgba(240, 128, 128, 0.3),
+    2px 6px 15px rgba(240, 128, 128, 0.3) inset;
+  transition: all ease-out 0.5s;
 }
 
-input:hover{
-    background-color: rgba(240, 128, 128, 0.2);
+input:hover {
+  background-color: rgba(240, 128, 128, 0.2);
 }
 
 input::placeholder {
-    color: rgba(240, 128, 128, 0.49);
+  color: rgba(240, 128, 128, 0.49);
 }
 
 button {
-    font-size: 14px;
-    width: 200px;
-    backdrop-filter: blur(1px);
-    color: lightcoral;
-    padding: 10px 20px;
-    font-weight: bold;
-    transition: background-color ease-out 0.5s;
+  font-size: 14px;
+  width: 200px;
+  backdrop-filter: blur(1px);
+  color: lightcoral;
+  padding: 10px 20px;
+  font-weight: bold;
+  transition: background-color ease-out 0.5s;
 }
 
-#input-btn{
-    background: rgba(144, 238, 144, 0.1);
-    border: 1px solid lightgreen;
-    box-shadow: 2px 6px 6px rgba(144, 238, 144, 0.3),2px 6px 20px rgba(144, 238, 144, 0.3) inset;
+#input-btn {
+  background: rgba(144, 238, 144, 0.1);
+  border: 1px solid lightgreen;
+  box-shadow:
+    2px 6px 6px rgba(144, 238, 144, 0.3),
+    2px 6px 20px rgba(144, 238, 144, 0.3) inset;
 }
 
 #delete-btn {
-    background: rgba(220,20,60,0.2);
-    border: 1px solid crimson;
-    box-shadow: 2px 6px 6px rgba(220, 20, 60, 0.5),2px 6px 20px rgba(220, 20, 60, 0.3) inset;
+  background: rgba(220, 20, 60, 0.2);
+  border: 1px solid crimson;
+  box-shadow:
+    2px 6px 6px rgba(220, 20, 60, 0.5),
+    2px 6px 20px rgba(220, 20, 60, 0.3) inset;
 }
 
-#input-btn:hover{
-    background-color:  rgba(144, 238, 144, 0.2);
+#input-btn:hover {
+  background-color: rgba(144, 238, 144, 0.2);
 }
-#delete-btn:hover{
-    background-color: rgba(220,20,60,0.3);
+#delete-btn:hover {
+  background-color: rgba(220, 20, 60, 0.3);
 }
-
 
 ul {
-    margin-top: 12px;
-    padding: 10px 20px 20px;
-    list-style: circle inside;
-    color: lightcoral;
+  margin-top: 12px;
+  padding: 10px 20px 20px;
+  list-style: circle inside;
+  color: lightcoral;
 }
 
 #li-el {
-    padding: 5px;
-    transition: color ease-out 0.3s;
+  padding: 5px;
+  transition: color ease-out 0.3s;
 }
 
-#li-el:hover{
-    color: #4fc6e4;
-    border: 1px solid #4fc6e4;
-    box-shadow: 2px 6px 6px rgba(79, 198, 228,0.3),2px 6px 15px rgba(79, 198, 228,0.3) inset;
+#li-el:hover {
+  color: #4fc6e4;
+  border: 1px solid #4fc6e4;
+  box-shadow:
+    2px 6px 6px rgba(79, 198, 228, 0.3),
+    2px 6px 15px rgba(79, 198, 228, 0.3) inset;
 }
 
 a {
-    color: #4fc6e4;
-    font-size: 18px;
-    transition: color ease-in-out 0.1s;
+  color: #4fc6e4;
+  font-size: 18px;
+  transition: color ease-in-out 0.1s;
 }
 
-
-
+@media (max-width: 350px) and (max-height: 800px) {
+  body {
+    height: 800px;
+    width: 350px;
+  }
+  button {
+    width: 150px;
+  }
+}
+@media (max-width: 351px) and (max-width: 1079px) {
+  body {
+    width: 1fr;
+  }
+}
